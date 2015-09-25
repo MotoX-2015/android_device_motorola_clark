@@ -14,6 +14,7 @@
 
 # ADSP
 bin/adspd
+bin/adsprpcd
 vendor/lib/libadsprpc.so
 vendor/lib/libfastcvopt.so
 vendor/lib/libscve.so
@@ -91,6 +92,15 @@ vendor/lib/soundfx/libqcreverb.so
 # Bluetooth
 bin/btnvtool
 bin/hci_qcomm_init
+bin/wcnss_filter
+etc/firmware/nvm_tlv.bin
+etc/firmware/nvm_tlv_1.3.bin
+etc/firmware/nvm_tlv_2.1.bin
+etc/firmware/nvm_tlv_3.0.bin
+etc/firmware/rampatch_tlv.img
+etc/firmware/rampatch_tlv_1.3.tlv
+etc/firmware/rampatch_tlv_2.1.tlv
+etc/firmware/rampatch_tlv_3.0.tlv
 vendor/lib/libbtnv.so
 vendor/lib64/libbtnv.so
 
@@ -104,19 +114,38 @@ etc/firmware/cpp_firmware_v1_4_0.fw
 etc/firmware/cpp_firmware_v1_6_0.fw
 etc/firmware/cpp_firmware_v1_8_0.fw
 lib/hw/camera.msm8992.so
+lib/libadvalgcore.so
+lib/libAisAdapter.so
+lib/libAlAisLib.so
+lib/libbson.so
+lib/libcamerabgproc-jni.so
+lib/libcamerabgprocservice.so
+lib/libjscore.so
+lib/libjustshoot.so
 lib/libmmcamera_interface.so
 lib/libmmjpeg_interface.so
+lib/libmot_sensorlistener.so
+lib/libmot-qc-fd-offline.so
 lib/libmm-qcamera.so
 lib/libqomx_core.so
+vendor/lib/libadsprpc.so
+vendor/lib/libC2D2.so
+vendor/lib/libfastcvadsp_stub.so
+vendor/lib/libfastcvopt.so
 vendor/lib/libflash_pmic.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegdmahw.so
 vendor/lib/libjpegehw.so
 vendor/lib/libmmcamera_ppbase_module.so
 vendor/lib/libmmcamera2_c2d_module.so
+vendor/lib/libmmcamera2_cpp_module.so
+vendor/lib/libmmcamera2_frame_algorithm.so
+vendor/lib/libmmcamera2_iface_modules.so
 vendor/lib/libmmcamera_isp_chroma_enhan40.so
 vendor/lib/libmmcamera_cac2_lib.so
 vendor/lib/libmmcamera2_imglib_modules.so
+
+
 vendor/lib/libmmcamera2_q3a_core.so
 vendor/lib/libmmcamera2_sensor_debug.so
 vendor/lib/libmmcamera_isp_clamp_viewfinder40.so
@@ -128,6 +157,27 @@ vendor/lib/libmmcamera2_wnr_module.so
 vendor/lib/libmmcamera_isp_demosaic44.so
 vendor/lib/libmmcamera2_stats_algorithm.so
 vendor/lib/libmmcamera_isp_be_stats44.so
+vendor/lib/libmmcamera_isp_bg_stats44.so
+vendor/lib/libmmcamera_isp_color_xform_viewfinder40.so
+vendor/lib/libmmcamera_isp_cs_stats44.so
+vendor/lib/libmmcamera_isp_bf_scale_stats44.so
+vendor/lib/libmmcamera_isp_clf44.so
+vendor/lib/libmmcamera_isp_fovcrop_encoder40.so
+vendor/lib/libmmcamera_isp_fovcrop_viewfinder40.so
+vendor/lib/libmmcamera_isp_ihist_stats44.so
+vendor/lib/libmmcamera_isp_luma_adaptation40.so
+vendor/lib/libmmcamera_isp_rs_stats44.so
+vendor/lib/libmmcamera_isp_scaler_encoder44.so
+vendor/lib/libmmcamera_isp_scaler_viewfinder44.so
+vendor/lib/libmmcamera_isp_wb40.so
+vendor/lib/libmmcamera_mot_imx230.so
+vendor/lib/libmmcamera_omnivision_ov5693_eeprom.so
+vendor/lib/libmmcamera_ov5693.so
+vendor/lib/libmmcamera_sony_imx230_eeprom.so
+
+vendor/lib/libmmcamera_vstab_module.so
+vendor/lib/libmmcamera_isp_color_xform_encoder40.so
+vendor/lib/libmmcamera_isp_color_correct40.so
 vendor/lib/libmmcamera_isp_demux40.so
 vendor/lib/libmmcamera_eztune_module.so
 vendor/lib/libmmcamera2_is.so
@@ -182,7 +232,6 @@ lib/libjscore.so
 lib/libjustshoot.so
 lib/libmmjpeg_interface.so
 lib/libmm-qcamera.so
-lib/libmot_sensorlistener.so
 lib/libmot-qc-fd-offline.so
 
 # Chromatix
@@ -222,6 +271,8 @@ vendor/lib/libchromatix_ov5693_video.so
 
 
 # CPU
+bin/msm_irqbalance
+bin/perfd
 bin/thermal-engine
 vendor/lib64/libthermalioctl.so
 vendor/lib64/libthermalclient.so
@@ -231,6 +282,7 @@ vendor/lib64/libqti-perfd-client.so
 # DRM
 # TZBSP
 bin/qseecomd
+lib/libdrmdecrypt.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
 vendor/lib64/libmasc.so
@@ -264,6 +316,14 @@ vendor/lib/libsi.so
 vendor/lib/libssd.so
 vendor/lib/libSSEPKCS11.so
 vendor/lib/libtzdrmgenprov.so
+vendor/lib/libwvdrm_L1.so
+vendor/lib/libwvm.so
+vendor/lib/libWVStreamControlAPI_L1.so
+vendor/lib/mediadrm/libdrmclearkeyplugin.so
+vendor/lib/mediadrm/libwvdrmengine.so
+
+
+
 
 # Display tuning
 vendor/lib64/libmm-als.so
@@ -304,11 +364,7 @@ bin/pm-proxy
 bin/pm-service
 bin/usb_uicc_client
 vendor/lib64/libconfigdb.so
-vendor/lib64/libdiag.so
 vendor/lib64/libdsi_netctrl.so
-vendor/lib64/libdsutils.so
-vendor/lib64/libidl.so
-vendor/lib64/libqcci_legacy.so
 vendor/lib64/libqdi.so
 vendor/lib64/libqdp.so
 vendor/lib64/libqmi_cci.so
@@ -322,12 +378,9 @@ vendor/lib64/libqmi.so
 vendor/lib64/libsmemlog.so
 vendor/lib64/libsystem_health_mon.so
 vendor/lib64/libvoice-svc.so
-vendor/lib/libconfigdb.so
 vendor/lib/libdiag.so
 vendor/lib/libdsi_netctrl.so
-vendor/lib/libdsutils.so
 vendor/lib/libidl.so
-vendor/lib/libqcci_legacy.so
 vendor/lib/libqdi.so
 vendor/lib/libqdp.so
 vendor/lib/libqmi_cci.so
@@ -341,11 +394,6 @@ vendor/lib/libqmi.so
 vendor/lib/libsmemlog.so
 vendor/lib/libvoice-svc.so
 
-# Perf
-bin/msm_irqbalance
-bin/perfd
-vendor/lib/libqti-perfd-client.so
-vendor/lib64/libqti-perfd-client.so
 
 # GPS
 -app/MotGeoFenceSvc/MotGeoFenceSvc.apk
@@ -399,7 +447,6 @@ vendor/lib/egl/libGLESv1_CM_adreno.so
 vendor/lib/egl/libGLESv2_adreno.so
 vendor/lib/egl/libq3dtools_adreno.so
 vendor/lib/egl/libq3dtools_esx.so
-vendor/lib/egl/libQTapGLES.so
 vendor/lib64/libadreno_utils.so
 vendor/lib64/libbccQTI.so
 vendor/lib64/libC2D2.so
@@ -421,7 +468,6 @@ vendor/lib64/egl/libGLESv1_CM_adreno.so
 vendor/lib64/egl/libGLESv2_adreno.so
 vendor/lib64/egl/libq3dtools_adreno.so
 vendor/lib64/egl/libq3dtools_esx.so
-vendor/lib64/egl/libQTapGLES.so
 
 # Media
 etc/firmware/dxhdcp2.b00
@@ -429,13 +475,13 @@ etc/firmware/dxhdcp2.b01
 etc/firmware/dxhdcp2.b02
 etc/firmware/dxhdcp2.b03
 etc/firmware/dxhdcp2.mdt
-etc/firmware/venus.b03
-etc/firmware/venus.b04
+etc/firmware/venus.b00
 etc/firmware/venus.b01
 etc/firmware/venus.b02
+etc/firmware/venus.b03
+etc/firmware/venus.b04
 etc/firmware/venus.mbn
 etc/firmware/venus.mdt
-etc/firmware/venus.b00
 vendor/lib64/libDivxDrm.so
 vendor/lib64/libExtendedExtractor.so
 vendor/lib64/libFlacSwDec.so
@@ -482,38 +528,18 @@ lib/librmnetctl.so
 lib64/librmnetctl.so
 vendor/lib/libdsutils.so
 vendor/lib/libdsi_netctrl.so
-vendor/lib/libidl.so
 vendor/lib/libqcci_legacy.so
-vendor/lib/libqmi.so
-vendor/lib/libdiag.so
 vendor/lib/libqdi.so
 vendor/lib/libqdp.so
 vendor/lib64/libdsutils.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/libidl.so
 vendor/lib64/libqcci_legacy.so
-vendor/lib64/libqmi.so
 vendor/lib64/libdiag.so
 vendor/lib64/libqdi.so
 vendor/lib64/libqdp.so
-
-vendor/lib/libqmi.so
-vendor/lib/libqmi_cci.so
-vendor/lib/libqmi_client_helper.so
-vendor/lib/libqmi_client_qmux.so
-vendor/lib/libqmi_common_so.so
-vendor/lib/libqmi_csi.so
-vendor/lib/libqmi_encdec.so
-vendor/lib/libqmiservices.so
-
-vendor/lib64/libqmi.so
-vendor/lib64/libqmi_cci.so
 vendor/lib64/libqmi_client_helper.so
-vendor/lib64/libqmi_client_qmux.so
-vendor/lib64/libqmi_common_so.so
 vendor/lib64/libqmi_csi.so
-vendor/lib64/libqmi_encdec.so
-vendor/lib64/libqmiservices.so
 
 # CNE / DPM
 lib64/libcnefeatureconfig.so
@@ -542,6 +568,7 @@ vendor/lib/libmasc.so
 vendor/lib/libNimsWrap.so
 vendor/lib/libvendorconn.so
 vendor/lib/libwqe.so
+vendor/lib/libWVStreamControlAPI_L1.so
 
 # Radio
 #bin/ks
@@ -550,23 +577,23 @@ bin/netmgrd
 bin/qmi_motext_hook
 bin/qmuxd
 bin/radish
-#bin/rild:bin/rild.mmi
+bin/rild
 bin/rfs_access
 bin/rmt_storage
 lib/libcnefeatureconfig.so
 lib/libmdmcutback.so
-#lib/libmdmdetect.so
 lib/libmotext_inf.so
 lib/libqmimotext.so
 lib/libril.so
 lib64/libadropbox.so
+lib64/libqmimotext.so
 vendor/lib/libconfigdb.so
 vendor/lib/libcneapiclient.so
+vendor/lib/libmdmdetect.so
 vendor/lib/libsystem_health_mon.so
 vendor/lib/libnetmgr.so
 vendor/lib/libril-qc-qmi-1.so
 vendor/lib/libril-qcril-hook-oem.so
-vendor/lib/libsmemlog.so
 vendor/lib/libtime_genoff.so
 vendor/lib/libxml.so
 vendor/lib64/libmdmdetect.so
@@ -590,6 +617,10 @@ lib/hw/lights.msm8992.so
 
 # Time (Linked to radio)
 bin/time_daemon
+vendor/lib/libTimeService.so
+vendor/lib/libtime_genoff.so
+vendor/lib64/libTimeService.so
+vendor/lib64/libtime_genoff.so
 
 vendor/lib/hw/flp.default.so
 vendor/lib/hw/activity_recognition.msm8992.so
