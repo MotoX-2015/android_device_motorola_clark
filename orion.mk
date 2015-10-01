@@ -6,10 +6,10 @@ TARGET_SCREEN_WIDTH := 2560
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/Orion/config/common_full_phone.mk)
+$(call inherit-product, vendor/orion/config/common_full_phone.mk)
 
 # Enhanced NFC
-$(call inherit-product, vendor/Orion/config/nfc_enhanced.mk)
+$(call inherit-product, vendor/orion/config/nfc_enhanced.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/motorola/clark/aosp_clark.mk)
