@@ -1,7 +1,7 @@
 [
     {
         "remote":      "github",
-        "repository":  "Thecrazyskull/https://github.com/Thecrazyskull/kernel-msm",
+        "repository":  "Thecrazyskull/kernel-msm",
         "target_path": "kernel/motorola/msm8992",
         "revision":    "cm-12.1"
     },
