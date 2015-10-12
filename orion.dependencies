@@ -1,0 +1,20 @@
+[
+    {
+        "remote":      "github",
+        "repository":  "Thecrazyskull/kernel-msm",
+        "target_path": "kernel/motorola/msm8992",
+        "revision":    "cm-12.1"
+    },
+    {
+        "remote":      "github",
+        "repository":  "CyanogenMod/android_device_qcom_common",
+        "target_path": "device/qcom/common",
+        "revision":    "cm-12.1"
+    },
+    {
+        "remote": "github",
+        "repository": "Thecrazyskull/proprietary_vendor_motorola",
+        "target_path": "vendor/motorola",
+        "revision": "cm-12.1-clark"
+    }
+]
